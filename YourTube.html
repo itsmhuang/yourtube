@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>YourTube</title>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+	integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+	crossorigin="anonymous">
+<script>
+	$(document)
+			.ready(
+					function() {
+
+						/*
+						https://www.googleapis.com/youtube/v3/search?part=snippet&location=37.42307%2C-122.08427&locationRadius=5mi&maxResults=5&q=jquery&type=video&key={YOUR_API_KEY}
+
+						https://www.googleapis.com/youtube/v3/videos?part=recordingDetails&id={VIDEO_ID}&key={YOUR_API_KEY}
+
+						 */
+						$("#search")
+								.click(
+										function() {
+											var googleKey = "AIzaSyAoLEQd78ITS4e5S1QboQxeLhvC8JQljdg";
+											var locationRadius;
+											var location;
+											var searchTerm = $("#searchTerm")
+													.val();
+											console.log(searchTerm)
+											var searchURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&location="
+													+ location
+													+ "&locationRadius="
+													+ locationRadius
+													+ "&maxResults=5&q="
+													+ searchTerm
+													+ "&type=video&key="
+													+ googleKey;
+
+											$.getJSON("http://ip-api.com/json",
+													function(data) {
+
+														// console.log(data);
+													});
+										});
+
+					});
+</script>
+</head>
+<body>
+<div class="container">
+  <h1>YourTube</h1>
+<div class="row">
+  <div class= "col-sm-9">
+    <input class="form-control" id="searchTerm">
+  </div>
+  <div class= "col-sm-2">
+<!-- Single button -->
+<div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Distance <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+    <li id ="5"><a class= "btn"href="#">5 miles</a></li>
+    <li id= "10"><a href="#">10 miles</a></li>
+    <li id ="25"><a href="#">25 miles</a></li>
+    <li id ="50"><a href="#">50 miles</a></li>
+    <li id ="100"><a href="#">100 miles</a></li>
+    <li id ="250"><a href="#">250 miles</a></li>
+  </ul>
+</div>
+  </div>
+  <div class= "col-sm-1">
+    <button id='search' type="button" class ="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+  </div>
+</div>
+  <div class="output">
+  </div>
+</div>
+
+
+</body>
+</html>
