@@ -1,0 +1,53 @@
+html{
+	/*background-image:url('');*/
+}
+
+html, body, #map {
+	height:100%;
+	width:100%;
+	margin:0;
+	padding:0;
+}
+
+#map {
+	height:30%;
+	width:30%;
+	/*margin: 100px;*/
+	border: 10px solid pink;
+}
+
+path { 
+	/*fill="rgb(0, 128, 0)" */
+	/*fill-opacity: 1;*/
+	
+	stroke: red;
+	stroke-opacity: 1;
+	stroke-width: 5;
+	/*stroke-linecap="butt" stroke-linejoin="miter" */
+
+	/*stroke-miterlimit: */
+}
+
+
+#output{
+	margin-top:25px;
+	margin-bottom:25px;
+	font-family:'Oswald';
+}
+
+.vids{
+	margin-bottom:10px;
+}
+
+.desc{
+	font-family:'Oswald';
+}
+
+.title{
+	font-family: Roboto;
+	font-size:2em;
+}
+
+.cName{
+	font-size:1.2em;
+}
