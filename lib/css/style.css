@@ -1,53 +1,72 @@
-html{
-	/*background-image:url('');*/
-}
-
-html, body, #map {
+html, body,{
 	height:100%;
 	width:100%;
-	margin:0;
-	padding:0;
+	margin:5px;
+	padding:5px;
 }
 
+#logo{
+  padding-top:2%;
+  padding-bottom:2%;
+}
 #map {
-	height:30%;
-	width:30%;
-	/*margin: 100px;*/
-	border: 10px solid pink;
+	height:300px;
+	width:350px;
+	margin: 30px auto;
 }
 
 path { 
-	/*fill="rgb(0, 128, 0)" */
-	/*fill-opacity: 1;*/
-	
 	stroke: red;
 	stroke-opacity: 1;
 	stroke-width: 5;
-	/*stroke-linecap="butt" stroke-linejoin="miter" */
-
-	/*stroke-miterlimit: */
 }
 
+img:hover{
+-webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+filter: grayscale(100%);
+}
 
+body{
+  background-image:url('http://codingtutorials360.com/hackback1.jpg');
+  color:white;
+  background-size:100%;
+  background-attachment: fixed;
+}
+
+button {
+
+}
 #output{
-	margin-top:25px;
-	margin-bottom:25px;
-	font-family:'Oswald';
+  /*margin-top:5px;*/
+  margin-bottom:25px;
+    font-family:'Roboto';
+  color:white;
 }
 
 .vids{
-	margin-bottom:10px;
+  margin-bottom:10px;
+  background-color:rgba(0,0,0,.5);
+  padding-top: 15px;
+  padding-bottom:15px;
+}
+
+input {
+	font-family: "Roboto";
 }
 
 .desc{
-	font-family:'Oswald';
+  font-family:'Roboto';
 }
 
 .title{
-	font-family: Roboto;
-	font-size:2em;
+  font-family: "Roboto";
+  font-size:2em;
 }
 
 .cName{
-	font-size:1.2em;
+  font-size:1.2em;
+}
+
+* {
+	border: 0px solid pink;
 }

@@ -1,39 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
-<title>YourTube</title>
-<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-<script type="text/javascript" src="lib/js/bootstrap.min.js"></script>
-<script src="https://js.arcgis.com/3.16/"></script>
-<script type="text/javascript" src="lib/js/videos.js"></script>
-<script type="text/javascript" src="lib/js/map.js"></script>
-<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" type="text/css" href="lib/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://js.arcgis.com/3.16/dijit/themes/claro/claro.css">
-    <link rel="stylesheet" href="https://js.arcgis.com/3.16/esri/css/esri.css">
-<link rel="stylesheet" type="text/css" href="lib/css/style.css">
+  <meta charset="ISO-8859-1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
+  <title>YourTube</title>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script type="text/javascript" src="lib/js/bootstrap.min.js"></script>
+  <script src="https://js.arcgis.com/3.16/"></script>
+  <script type="text/javascript" src="lib/js/script.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="lib/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://js.arcgis.com/3.16/dijit/themes/claro/claro.css">
+  <link rel="stylesheet" href="https://js.arcgis.com/3.16/esri/css/esri.css">
+  <link rel="stylesheet" type="text/css" href="lib/css/style.css">
 </head>
 <body>
+  <div class="container">
+    <img src = "http://codingtutorials360.com/Yourtubelogo.png" id="logo" class="center-block">
+    <div class="row">
+      <div class= "col-sm-8">
+        <input class="form-control" id="searchTerm" placeholder="Search">
+      </div>
+      <div class= "col-sm-3">
+       <input class="form-control" id="distance" placeholder = "Enter Distance in Miles (Default: 25)">
+     </div>
+     <div class= "col-sm-1">
+      <button id='search' type="button" class ="btn btn-danger"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+    </div>
+  </div>
+  <div class="row">
+    <div id= "map" class ="text-center"></div>
+  </div>
+  </div>
+
+  
+
+</div>
+
 <div class="container">
-  <h1>YourTube</h1>
-<div class="row">
-  <div class= "col-sm-7">
-    <input class="form-control" id="searchTerm" placeholder="Search">
-  </div>
-  <div class= "col-sm-4">
- <input class="form-control" id="distance" placeholder = "Enter Distance Ex: 25">
-  </div>
-  <div class= "col-sm-1">
-    <button id='search' type="button" class ="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-  </div>
+  <div id="output"></div>
 </div>
-  <div id="output">
-  </div>
-</div>
-    <div id="map"></div>
 
 </body>
 </html>
